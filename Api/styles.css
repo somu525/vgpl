@@ -1,0 +1,210 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Base Styles */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header */
+  header h1 {
+    font-size: 2rem;
+    color: #007bff;
+  }
+  
+  /* Search and Add Section */
+  .row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  #searchBox {
+    padding: 8px 12px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  #clearSearch,
+  #addStudentBtn {
+    padding: 8px 16px;
+    border: none;
+    background-color: #6c757d;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #addStudentBtn {
+    background-color: #28a745;
+  }
+  
+  #clearSearch:hover,
+  #addStudentBtn:hover {
+    opacity: 0.9;
+  }
+  
+  /* Table Styles */
+  .table-responsive {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  thead th {
+    background-color: #007bff;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tbody button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  tbody button:first-of-type {
+    background-color: #ffc107; /* Edit */
+    color: #000;
+  }
+  
+  tbody button:last-of-type {
+    background-color: #dc3545; /* Delete */
+    color: #fff;
+  }
+  
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .pagination button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .pagination button.active {
+    background-color: #0056b3;
+    font-weight: bold;
+  }
+  
+  /* Modal Styles */
+  #studentModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+  }
+  
+  .modal-content h2 {
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+  
+  .modal-content label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+  
+  .modal-content input,
+  .modal-content select,
+  .modal-content textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .modal-content .modal-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .modal-content button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modal-content #cancelBtn {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .modal-content #submitBtn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  /* Responsive Tweaks */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+    }
+    thead th,
+    tbody td {
+      font-size: 14px;
+    }
+  }
+  

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Customer</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Edit Customer</h1>
+    </header>
+    <main>
+        <form id="edit-customer-form" class="form-container">
+            <label for="edit-first-name">First Name</label>
+            <input type="text" id="edit-first-name" placeholder="First Name" required />
+            
+            <label for="edit-last-name">Last Name</label>
+            <input type="text" id="edit-last-name" placeholder="Last Name" required />
+            
+            <label for="edit-dob">Date of Birth</label>
+            <input type="date" id="edit-dob" required />
+            
+            <label for="edit-phone">Phone Number</label>
+            <input type="tel" id="edit-phone" placeholder="Phone Number" required />
+            
+            <label for="edit-email">Email</label>
+            <input type="email" id="edit-email" placeholder="Email" required />
+            
+            <label for="edit-gender">Gender</label>
+            <select id="edit-gender">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+            
+            <label for="edit-address">Address</label>
+            <textarea id="edit-address" placeholder="Address" required></textarea>
+            
+            <label for="edit-profile">Profile Picture</label>
+            <input type="file" id="edit-profile" accept="image/*" onchange="previewImage(event)" />
+            
+            <div id="edit-image-preview-container" class="image-preview-container">
+                <img id="edit-profile-preview" src="" alt="Profile Preview" />
+            </div>
+
+            <button type="submit">Update Customer</button>
+        </form>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

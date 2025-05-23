@@ -1,0 +1,40 @@
+.maincon{
+    background-color: #cfe3ff;
+    border-radius:1% ;
+}
+ body>section hr{
+    height: 1px;
+    background-color: orange;
+}
+body>hr{
+    height: 2px;
+    background-color: black;
+}
+.subbtn{
+    background-color: black;
+    border: none;
+    border-radius: 10%;
+    color: #cfe3ff;
+    margin-bottom: 30px;
+}
+
+.btnsec{
+    text-align: center;
+}
+thead{
+    background-color: #cfe3ff;
+    vertical-align: middle;
+}
+tr{
+    text-align: center;
+}
+th,
+td{
+    white-space: nowrap;
+}
+.contab{
+    overflow-x: auto;
+}
+.tabbtn{
+    text-align: center;
+}

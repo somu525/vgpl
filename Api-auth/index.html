@@ -1,0 +1,89 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Customer Management</h1>
+        <button class="btn add-btn" onclick="window.location.href='addCustomer.html'">Add Customer</button>
+        <button id="get-token-btn" class="btn" onclick="getToken()">Get Token</button>
+        <button id="get-data-btn" class="btn" disabled>Get Data</button>
+    </header>
+    <main>
+        <div id="customer-list">
+            <h2>All Customers</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Serial No.</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>DOB</th>
+                        <th>Gender</th>
+                        <th>Address</th>
+                        <th>Profile</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="customers-container">
+                    
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customer Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Customer Management</h1>
+    <div class="header-actions">
+      <button onclick="window.location.href='addCustomer.html'">Add Customer</button>
+      <button onclick="getToken()">Get Token</button>
+      <button onclick="getCustomers()">Get Data</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="table-container">
+      <div class="pagination-header">
+        <span id="page-info">Showing 0-0 of 0</span>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>S/N</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>Address</th>
+            <th>Profile</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="customers-container"></tbody>
+      </table>
+      <div id="pagination-controls" class="pagination"></div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

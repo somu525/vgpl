@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Customer</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Add New Customer</h1>
+    </header>
+    <main>
+        <form id="add-customer-form" class="form-container">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" placeholder="First Name" required />
+            
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" placeholder="Last Name" required />
+            
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" required />
+            
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Phone Number" required />
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Email" required />
+            
+            <label for="gender">Gender</label>
+            <select id="gender">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+            
+            <label for="address">Address</label>
+            <textarea id="address" placeholder="Address" required></textarea>
+            
+            <label for="profile">Profile Picture</label>
+            <input type="file" id="profile" accept="image/*" onchange="previewImage(event)" />
+            
+            <div id="image-preview-container" class="image-preview-container">
+                <img id="profile-preview" src="" alt="Profile Preview" />
+            </div>
+
+            <button type="submit">Add Customer</button>
+        </form>
+    </main>
+    
+    <script src="app.js"></script>
+</body>
+</html>
