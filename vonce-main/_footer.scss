@@ -1,0 +1,221 @@
+.footer-section {
+  .footer-content {
+    position: relative;
+
+    .company-details {
+      color: $color-white;
+      font-size: $fsize16;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @include media("screen", ">=1200px", "<=1434px") {
+        height: 720px;
+      }
+
+      .logo {
+        width: 229px;
+        height: 64px;
+
+        @include media("screen", "<=1200px") {
+          width: 190px;
+          height: 54px;
+        }
+      }
+    }
+
+    .footer-setbck {
+      position: relative;
+      margin-top: 4rem;
+
+      .quote {
+        width: 100%;
+        background-color: $bg-primary;
+        position: relative;
+        justify-content: flex-start;
+
+        h1 {
+          font-size: 3.5rem;
+          line-height: 5rem;
+          font-weight: normal;
+          font-family: $custom-font-family;
+          color: $color-white;
+        }
+
+        .btn-black {
+          text-align: center;
+          white-space: nowrap !important;
+          margin: 0 auto !important;
+        }
+      }
+
+      .quicklinks {
+        background-color: $bg-primary-dark;
+        color: $color-white;
+
+        height: 100%;
+        position: relative;
+
+        .links-text {
+          a {
+            color: #abb1c3;
+            font-weight: normal;
+          }
+        }
+        .subscribe {
+          p {
+            color: #abb1c3;
+          }
+        }
+
+        .sub-form {
+          position: relative;
+          input {
+            min-height: 40px;
+            background-color: $color-white;
+            padding: 2rem;
+            border-radius: 0.4rem;
+            width: 100%;
+            font-size: $fsize18;
+
+            @include media("<=tablet") {
+              min-height: 25px !important;
+            }
+          }
+
+          textarea {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 0.8rem;
+            width: 100%;
+            border: 1px solid #cbcbdc;
+            margin-bottom: 2rem;
+            font-size: 18px;
+            color: #717788;
+            resize: none;
+          }
+
+          .msg-icon {
+            display: inline-block;
+            position: absolute;
+            right: 0%;
+            top: 50%;
+            transform: translate(0, -50%);
+            @include media("<=tablet") {
+              top: 35%;
+              transform: translate(0, -30%);
+            }
+          }
+        }
+      }
+
+      .bottom-links1 {
+        background-color: $bg-primary-dark;
+        height: auto;
+        display: inline;
+        padding: 1rem 0 2rem 0;
+        text-align: right;
+        a {
+          color: $color-gray;
+        }
+
+        @include media("<=tablet") {
+          flex-direction: column;
+          flex-wrap: wrap;
+        }
+        ul {
+        }
+
+        li {
+          margin: 0 0 0 2rem;
+          display: inline;
+        }
+      }
+    }
+
+    @include media("<=999px") {
+      .company-details {
+        padding: 0 4rem 3rem;
+      }
+
+      .footer-setbck {
+        margin-top: 0rem;
+
+        .quicklinks,
+        .quote {
+          width: 100%;
+
+          .links-text,
+          .subscribe {
+            padding: 0rem 1rem;
+          }
+        }
+
+        .bottom-links {
+          margin-top: -1px;
+        }
+
+        @include media("<=tablet") {
+          .mtb-13 {
+            margin-top: 13rem !important;
+            margin-bottom: 0rem !important;
+          }
+
+          .sub-form {
+            input {
+              min-height: 35px;
+              width: 100%;
+            }
+            padding-bottom: 3rem;
+          }
+
+          .quote {
+            text-align: center;
+
+            .contact-btn {
+              margin: 0 auto;
+            }
+            h1 {
+              font-size: 2.2rem;
+              line-height: 3.5rem;
+            }
+          }
+        }
+
+        @include media("<=phone") {
+          .subscribe {
+            margin-top: 2rem;
+          }
+        }
+      }
+    }
+
+    @include media("<=775px") {
+      .quicklinks {
+        justify-content: center;
+      }
+    }
+  }
+
+  .powered_by {
+    background-color: #000f22;
+    border-top: 1px solid rgba(113, 119, 136, 0.5);
+    color: #717788;
+    text-align: center;
+    font-size: 14px;
+    padding: 1rem 0;
+    a {
+      color: #717788;
+    }
+
+    @include media("<=tablet") {
+      font-size: 12px;
+    }
+  }
+}
+
+@include media("screen", "<=1200px") {
+  .ptb-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}
