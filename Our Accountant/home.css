@@ -1,0 +1,10 @@
+body{
+    background-color: rgb(201, 249, 249);
+}
+.heading{
+    text-align: center;
+}
+hr{
+    height: 2px;
+    background-color: black;
+}

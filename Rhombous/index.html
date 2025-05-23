@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rhombus Matrix</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color:beige;
+    }
+
+    input {
+      padding: 8px 12px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      background-color: beige;
+    }
+    button {
+      padding: 8px 12px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      background-color:#1D418C;
+      color: beige;
+    }
+
+    .grid {
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .row {
+      display: flex;
+    }
+
+    .block {
+      width: 20px;
+      height: 20px;
+      border: 1px solid rgb(255, 255, 255);
+      box-sizing: border-box;
+      transition: background 0.3s;
+    }
+
+    .filled {
+      background-color:#F9CD05;
+    }
+  </style>
+</head>
+<body>
+    <div>
+        <h2>Rhombus in a Matrix</h2>
+        <input type="number" id="size" min="1" max="1000" placeholder="Enter n" />
+        <button id="generate">Generate Matrix</button>
+    </div>
+    <div class="grid" id="gridContainer"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+  function isInRhombus(i, j, n) {
+    let half = n / 2;
+
+    // For odd n, center is a single point
+    if (n % 2 !== 0) {
+      const center = Math.floor(half);
+      return Math.abs(i - center) + Math.abs(j - center) <= center;
+    }
+
+    // For even n, use average of 2 centers
+    const centerTopLeft = half - 1;
+    const centerBottomRight = half;
+    
+    const verticalDist = Math.min(
+      Math.abs(i - centerTopLeft),
+      Math.abs(i - centerBottomRight)
+    );
+
+    const horizontalDist = Math.min(
+      Math.abs(j - centerTopLeft),
+      Math.abs(j - centerBottomRight)
+    );
+
+    return verticalDist + horizontalDist <= centerBottomRight - 1;
+  }
+
+  $("#generate").click(function () {
+    let n = parseInt($("#size").val());
+    if (isNaN(n) || n < 1) {
+      alert("Please enter a valid number greater than 0");
+      return;
+    }
+
+    let $grid = $("#gridContainer");
+    $grid.empty();
+
+    for (let i = 0; i < n; i++) {
+      let $row = $("<div>").addClass("row");
+      for (let j = 0; j < n; j++) {
+        let $block = $("<div>").addClass("block");
+        if (isInRhombus(i, j, n)) {
+          $block.addClass("filled");
+        }
+        $row.append($block);
+      }
+      $grid.append($row);
+    }
+  });
+</script>
+
+
+</body>
+</html>

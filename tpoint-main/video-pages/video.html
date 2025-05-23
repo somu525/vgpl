@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+        <!-- DataTable CSS -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="../assets/css/video-pages.css">
+        <link rel="stylesheet" href="../assets/css/footer.css">
+        <link rel="stylesheet" href="../assets/css/course-pages.css">
+
+        <!-- jQuery and DataTables JS -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            if (!localStorage.getItem('token')) {
+                window.location.href = "../login.html";
+            }
+        </script>
+        <title>IVideos</title>
+    </head>
+
+    <body>
+        <div class="sticky-top p-0 mb-4" style="position: sticky;background-color: beige;">
+            <div class="container-fluid">
+                <div class="position-relative p-0">
+                    <nav class="navbar navbar-expand-lg navbar-light px-4">
+                        <a href="../course.html" class="navbar-brand p-0">
+                            <img src="../assets/logo.png" alt="Logo" id="logo">
+                        </a>
+                        <div class="d-flex align-items-center ms-auto">
+                            <div class="d-flex align-items-center me-3">
+                                <i class="fas fa-user-circle" style="font-size: 30px;"></i>
+                                <span class="ms-2" id="user-email">user@example.com</span>
+                            </div>
+
+                            <button class="btn btn-dark"
+                                onclick="(()=>{localStorage.clear();window.location.href='../login.html'})()">Log
+                                Out</button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h1 class="section-heading" id="video-title">........</h1>
+            <button onclick="history.back()" class="btn btn-dark rounded-pill px-4 py-2" style="margin-top: 20px;">
+                ← Back
+            </button>
+            <div class="video-container">
+                <iframe id="video-frame" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <footer class="container-fluid mt-5 w-100">
+            <div class="container-fluid p-5">
+                <div class="row">
+                    <div class="col-5">
+                        <img src="../assets/logo.png" alt="logo">
+                        <p style="text-align: justify;font-size: 15px;">We provides tutorials and interview questions of
+                            all technology like java tutorial, android,
+                            java frameworks</p>
+                        <h5 class="mb-4">Contact info</h5>
+                        <p>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                <path
+                                    d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 256c-35.3 0-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64s-28.7 64-64 64z" />
+                            </svg>
+                            G-13, 2nd Floor, Sec-3, Noida, UP, 201301, India
+                        </p>
+                        <p>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path
+                                    d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64v128z" />
+                            </svg>
+                            <a href="mailto:hr@tpointtech.com">hr@tpointtech.com</a>
+                        </p>
+                        <p>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                                height="1.8em" width="1.8em" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="none" d="M0 0h24v24H0V0z"></path>
+                                <path
+                                    d="M16.49 3c-2.21 0-4.21.9-5.66 2.34l1.06 1.06a6.47 6.47 0 0 1 9.18 0l1.06-1.06A7.932 7.932 0 0 0 16.49 3z">
+                                </path>
+                                <path
+                                    d="M20.03 7.46a5.022 5.022 0 0 0-7.08 0l1.06 1.06c.63-.63 1.51-1.03 2.47-1.03s1.84.39 2.47 1.03l1.08-1.06zM15.08 9.59 16.49 11l1.41-1.41c-.36-.37-.86-.59-1.41-.59s-1.05.22-1.41.59z">
+                                </path>
+                                <path
+                                    d="m15.63 14.4-2.52 2.5c-2.5-1.43-4.57-3.5-6-6l2.5-2.52c.23-.24.33-.57.27-.9L9.13 3.8c-.09-.46-.5-.8-.98-.8H4c-.56 0-1.03.47-1 1.03.17 2.89 1.05 5.6 2.43 7.97 1.58 2.73 3.85 4.99 6.57 6.57 2.37 1.37 5.08 2.26 7.97 2.43.56.03 1.03-.44 1.03-1v-4.15c0-.48-.34-.89-.8-.98l-3.67-.73a.985.985 0 0 0-.9.26z">
+                                </path>
+                            </svg>
+                            <a href="tel:+919599086977">+91-9599086977</a>
+                        </p>
+                        <h5 class="mb-4">Follow us</h5>
+                        <div class="d-flex">
+                            <a class="btn btn-outline-light btn-social pt-4" rel="nofollow" target="_blank"
+                                href="https://www.facebook.com/tpointtech">
+                                <img src="https://images.tpointtech.com/static/img/facebook.png"
+                                    alt="Tpoint Tech Facebook Page" width="24">
+                            </a>
+                            <a class="btn btn-outline-light btn-social pt-4" rel="nofollow" target="_blank"
+                                href="https://x.com/tpointtech">
+                                <img src="https://images.tpointtech.com/static/images/x.png" alt="Tpoint Tech X Page"
+                                    width="24">
+                            </a>
+                            <a class="btn btn-outline-light btn-social pt-3" rel="nofollow" target="_blank"
+                                href="https://www.linkedin.com/company/tpointtech/">
+                                <img src="https://images.tpointtech.com/static/images/linkedin.png"
+                                    alt="Tpoint Tech Linkedin Page" width="24">
+                            </a>
+                            <a class="btn btn-outline-light btn-social pt-3" rel="nofollow" target="_blank"
+                                href="https://t.me/tpointtech">
+                                <img src="https://images.tpointtech.com/static/images/telegram.png"
+                                    alt="Tpoint Tech Telegram Channel" width="24">
+                            </a>
+                            <a class="btn btn-outline-light btn-social pt-4" rel="nofollow" target="_blank"
+                                href="https://www.youtube.com/@tpointtechofficial">
+                                <img src="https://images.tpointtech.com/static/img/youtube.png"
+                                    alt="Tpoint Tech Youtube Channel">
+                            </a>
+                            <a class="btn btn-outline-light btn-social pt-4" rel="nofollow" target="_blank"
+                                href="https://www.instagram.com/tpointtech">
+                                <img src="https://images.tpointtech.com/static/images/insta.png"
+                                    alt="Tpoint Tech instagram Page" width="24">
+                            </a>
+                        </div>
+                        <br>
+                        <p class="latest-post">
+                            <a href="#">Latest Post</a>
+                        </p>
+                        <p class="latest-post">
+                            <a href="#">Tutorials List</a>
+                        </p>
+                        <p class="latest-post">
+                            <a href="#">PRIVACY POLICY</a>
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <h5 class="mb-4">Tutorials</h5>
+                        <a class="btn btn-link">Java</a>
+                        <a class="btn btn-link">Data Structures</a>
+                        <a class="btn btn-link">C Programming</a>
+                        <a class="btn btn-link">C++ Tutorial</a>
+                        <a class="btn btn-link">C# Tutorial</a>
+                        <a class="btn btn-link">PHP Tutorial </a>
+                        <a class="btn btn-link">HTML Tutorial</a>
+                        <a class="btn btn-link">JavaScript Tutorial </a>
+                        <a class="btn btn-link">jQuery Tutorial </a>
+                        <a class="btn btn-link">Spring Tutorial</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="mb-4">Interview Questions</h5>
+                        <a class="btn btn-link">Microsoft </a>
+                        <a class="btn btn-link">Amazon </a>
+                        <a class="btn btn-link">Adobe </a>
+                        <a class="btn btn-link">Intuit </a>
+                        <a class="btn btn-link">Accenture</a>
+                        <a class="btn btn-link">Cognizant </a>
+                        <a class="btn btn-link">Capgemini </a>
+                        <a class="btn btn-link">Wipro </a>
+                        <a class="btn btn-link">Tcs </a>
+                        <a class="btn btn-link">Infosys </a>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <h5 class="mb-4">Online Compiler</h5>
+                        <a class="btn btn-link">C </a>
+                        <a class="btn btn-link">R </a>
+                        <a class="btn btn-link">C++ </a>
+                        <a class="btn btn-link">Php </a>
+                        <a class="btn btn-link">Java </a>
+                        <a class="btn btn-link">Html </a>
+                        <a class="btn btn-link">Swift </a>
+                        <a class="btn btn-link">Python </a>
+                        <a class="btn btn-link">JavaScript </a>
+                        <a class="btn btn-link">TypeScript </a>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid px-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-12 text-center  mb-3 mb-md-0">
+                            &copy; Copyright 2011 - 2025 TpointTech.com. All Rights Reserved.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            document.getElementById('user-email').textContent = JSON.parse(localStorage.getItem('mail')) || 'user@example.com';
+            const urlParams = new URLSearchParams(window.location.search);
+            const videoLink = urlParams.get('video');
+            const topicTitle = urlParams.get('topic');
+
+            if (videoLink && topicTitle) {
+                document.getElementById('video-title').innerText = topicTitle;
+                document.getElementById('video-frame').src = videoLink;
+            } else {
+                document.getElementById('video-title').innerText = "Video not found";
+            }
+        </script>
+
+    </body>
+
+</html>

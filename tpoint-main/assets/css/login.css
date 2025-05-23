@@ -1,0 +1,11 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: beige;
+}
+input:focus {
+  border: 1px solid gray !important;
+  box-shadow: 0 0 0 0.25rem beige !important;
+}

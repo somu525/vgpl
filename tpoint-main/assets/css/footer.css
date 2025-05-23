@@ -1,0 +1,75 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px #ccc;
+  text-align: left;
+  margin-top: 15px;
+}
+
+footer {
+  background-size: contain;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+footer img {
+  margin-bottom: 15px;
+}
+
+footer p svg {
+  width: 20px;
+  margin-right: 10px;
+}
+
+footer a {
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+}
+
+footer .btn.btn-social {
+  margin-right: 5px;
+  padding: 6px 12px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.btn-link {
+  color: black;
+  display: block;
+  text-align-last: left;
+  padding: 0;
+  margin-bottom: 10px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+h5.mb-4 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.copyright {
+  padding: 25px 0;
+  font-size: 14px;
+  border-top: 1px solid;
+}
+
+.latest-post a {
+  font-size: 15px;
+  color: green !important;
+}

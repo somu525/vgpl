@@ -1,0 +1,269 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color:  white;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.section-heading {
+    color: #333;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #4caf50;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+    padding: 12px 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+}
+
+.table td {
+    background-color: #fff;
+    font-size: 1rem;
+    color: #555;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+    background-color: #f1f8e9;
+}
+
+.table-striped tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.table a {
+    text-decoration: none;
+    color: white;
+    background-color: #4caf50;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.table a:hover {
+    background-color: #45a049;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    background-color: #4caf50;
+    color: white !important;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    margin-left: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: #45a049;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background-color: #45a049;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.dataTables_filter {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+#python-table_filter {
+    text-align: left;
+}
+
+#python-table_length {
+    display: none;
+}
+
+#python-table_wrapper {
+    margin-top: 20px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+} */
+/* Resetting and global settings */
+/* Resetting and global settings */
+/* Resetting and global settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;  /* Beige background */
+    color: #333; /* Darker text color for readability */
+    font-size: 1rem;
+    line-height: 1.6;
+   
+}
+
+/* Section headings styling */
+.section-heading {
+    color: #222; /* Dark black for contrast */
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #333; /* Darker border for elegance */
+    letter-spacing: 0.5px;
+}
+
+/* Table styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+}
+
+/* Table cell padding and borders */
+.table th,
+.table td {
+    padding: 12px 25px;
+    text-align: center;
+    border: 1px solid #e1e1e1;  /* Subtle border color */
+}
+
+/* Table header - Darker beige background */
+.table th {
+    background-color: beige;  /* Darker beige for header */
+    color: #222; /* Dark text color for header */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Table body cells */
+.table td {
+    background-color: #fff;  /* White background for content */
+    font-size: 1rem;
+    color: #555;  /* Dark grey text for readability */
+}
+
+/* Striped table rows */
+.table-striped tbody tr:nth-child(odd) {
+    background-color: #fafafa;  /* Slightly lighter beige for odd rows */
+}
+
+.table-striped tbody tr:nth-child(even) {
+    background-color: #ffffff;  /* White background for even rows */
+}
+
+/* Link styling inside table */
+.table a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #333; /* Dark background for links */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+/* Link hover effect */
+.table a:hover {
+    background-color: #555;  /* Lighter black on hover */
+    transform: translateY(-2px);  /* Slight lifting effect */
+}
+
+/* Pagination button styling */
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    background-color: #333;
+    color: #fff !important;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    margin-left: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Pagination button hover effect */
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: #444; /* Lighter black on hover */
+}
+
+/* Current page pagination button */
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background-color: #444;
+}
+
+/* Disabled pagination button */
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Filter and search input styling */
+.dataTables_filter {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Filter input specific styling */
+#python-table_filter {
+    text-align: left;
+}
+
+/* Hide table length control */
+#python-table_length {
+    display: none;
+}
+
+/* Wrapper for the table */
+#python-table_wrapper {
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px;
+}
+
+/* General link styling */
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for general links */
+a:hover {
+    color: #333; /* Darken link on hover */
+}
